@@ -656,7 +656,6 @@ section.skills {
   transition: transform 0.3s, box-shadow 0.3s;
   animation: tech-pop 1.2s cubic-bezier(.68,-0.55,.27,1.55) both;
   animation-delay: calc(var(--i, 0) * 0.08s);
-  cursor: pointer;
 }
 
 .tech-icon img {
