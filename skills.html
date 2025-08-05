@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Website</title>
-    <link rel="stylesheet" href="/src/css/main.css" />
+    <link rel="stylesheet" href="/src/css/main.css?v=2025-08-05-1758" />
   </head>
   <body>
     <div class="site-container">
@@ -25,10 +25,17 @@
                 <a href="resume.html" class="micro-menu__link">Resume</a>
               </li>
               <li class="micro-menu__item">
-                <a href="mailto:qoreycube.at.gmail.com" class="micro-menu__link">Email</a>
+                <a href="mailto:qoreycube.at.gmail.com" class="micro-menu__link"
+                  >Email</a
+                >
               </li>
               <li class="micro-menu__item">
-                <a href="https://www.linkedin.com/in/cory-kratz-ba96b7b2/" target="_blank" class="micro-menu__link">LinkedIn</a>
+                <a
+                  href="https://www.linkedin.com/in/cory-kratz-ba96b7b2/"
+                  target="_blank"
+                  class="micro-menu__link"
+                  >LinkedIn</a
+                >
               </li>
             </ul>
           </div>
@@ -203,35 +210,35 @@
     </div>
     <script src="/src/js/main.js"></script>
     <script>
-      document.querySelectorAll('.skill-pill').forEach(pill => {
-        pill.setAttribute('draggable', 'true');
-        pill.addEventListener('dragstart', function(e) {
-          e.dataTransfer.setData('text/plain', pill.textContent);
-          e.dataTransfer.effectAllowed = 'move';
-          pill.classList.add('dragging');
+      document.querySelectorAll(".skill-pill").forEach((pill) => {
+        pill.setAttribute("draggable", "true");
+        pill.addEventListener("dragstart", function (e) {
+          e.dataTransfer.setData("text/plain", pill.textContent);
+          e.dataTransfer.effectAllowed = "move";
+          pill.classList.add("dragging");
         });
-        pill.addEventListener('dragend', function() {
-          pill.classList.remove('dragging');
+        pill.addEventListener("dragend", function () {
+          pill.classList.remove("dragging");
         });
       });
 
-      document.querySelectorAll('.skills__pills').forEach(container => {
-        container.addEventListener('dragover', function(e) {
+      document.querySelectorAll(".skills__pills").forEach((container) => {
+        container.addEventListener("dragover", function (e) {
           e.preventDefault();
-          e.dataTransfer.dropEffect = 'move';
-          container.classList.add('drag-over');
+          e.dataTransfer.dropEffect = "move";
+          container.classList.add("drag-over");
         });
-        container.addEventListener('dragleave', function() {
-          container.classList.remove('drag-over');
+        container.addEventListener("dragleave", function () {
+          container.classList.remove("drag-over");
         });
-        container.addEventListener('drop', function(e) {
+        container.addEventListener("drop", function (e) {
           e.preventDefault();
-          container.classList.remove('drag-over');
-          const pillText = e.dataTransfer.getData('text/plain');
-          const draggingPill = document.querySelector('.skill-pill.dragging');
+          container.classList.remove("drag-over");
+          const pillText = e.dataTransfer.getData("text/plain");
+          const draggingPill = document.querySelector(".skill-pill.dragging");
           if (draggingPill && container !== draggingPill.parentNode) {
             container.appendChild(draggingPill);
-            console.log('Congratulations! You found an easter egg!')
+            console.log("Congratulations! You found an easter egg!");
           }
         });
       });
