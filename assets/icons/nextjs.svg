@@ -1,0 +1,5 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="48" height="48" rx="12" fill="#181c24"/>
+  <text x="24" y="28" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-size="16" font-weight="bold" fill="#fff">Next.js</text>
+  <circle cx="38" cy="10" r="4" fill="#fff" opacity="0.13"/>
+</svg>
