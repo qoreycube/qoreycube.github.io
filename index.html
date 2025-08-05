@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="/src/css/main.css" />
+  </head>
+  <body>
+    <div class="site-container">
+      <main>
+        <section class="hero">
+          <div class="micro-menu">
+            <ul class="micro-menu__list">
+              <li class="micro-menu__item">
+                <a href="index.html" class="micro-menu__link">Home</a>
+              </li>
+              <li class="micro-menu__item">
+                <a href="skills.html" class="micro-menu__link">Skills</a>
+              </li>
+              <li class="micro-menu__item">
+                <a href="portfolio.html" class="micro-menu__link">Portfolio</a>
+              </li>
+              <li class="micro-menu__item">
+                <a href="resume.html" class="micro-menu__link">Resume</a>
+              </li>
+              <li class="micro-menu__item">
+                <a href="mailto:qoreycube.at.gmail.com" class="micro-menu__link"
+                  >Email</a
+                >
+              </li>
+              <li class="micro-menu__item">
+                <a
+                  href="https://www.linkedin.com/in/cory-kratz-ba96b7b2/"
+                  target="_blank"
+                  class="micro-menu__link"
+                  >Linked-in</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="separator"></div>
+          <div class="hero-container">
+            <div class="hero__content">
+              <h1 class="hero__title">Cory Kratz</h1>
+              <h2 class="hero__subtitle typewriter">
+                Full Stack Developer & Technologist
+              </h2>
+            </div>
+            <div class="hero__image">
+              <img src="/assets/images/profile.jpg" alt="Profile Picture" />
+            </div>
+          </div>
+        </section>
+        <div class="separator"></div>
+        <section class="quick-stats">
+          <div class="quick-stats__container">
+            <div class="quick-stats__item">
+              <span class="quick-stats__number">22</span>
+              <span class="quick-stats__label">Years Experience</span>
+            </div>
+            <div class="quick-stats__item">
+              <span class="quick-stats__number">100+</span>
+              <span class="quick-stats__label">Projects Delivered</span>
+            </div>
+            <div class="quick-stats__item">
+              <span class="quick-stats__number">25+</span>
+              <span class="quick-stats__label">Clients Served</span>
+            </div>
+          </div>
+        </section>
+        <section class="intro">
+          <div
+            class="accordion-bar"
+            tabindex="0"
+            aria-expanded="false"
+            aria-controls="intro-accordion"
+          >
+            <span class="accordion-bar__label">
+              TLDR: Experienced software engineer with 20+ years in developing
+              innovative software solutions. Passionate about technology,
+              skilled in C#, Python, C++, and JavaScript, with expertise in
+              various frameworks and tools. Proven track record as a lead
+              developer, architect, and director, dedicated to solving complex
+              problems and mentoring others. Committed to delivering
+              high-quality, creative solutions tailored to clients' needs.
+            </span>
+            <span class="accordion-bar__chevron">&#9660;</span>
+          </div>
+          <div class="accordion-content" id="intro-accordion" hidden>
+            <p class="intro-paragraph">
+              Hello, I'm Cory Kratz, a software engineer with over 20 years of
+              experience in crafting innovative software solutions. My passion
+              for technology has driven my career, leading me to develop a broad
+              skillset in languages like C#, Python, C++, and JavaScript, as
+              well as various development frameworks and databases.
+            </p>
+            <p class="intro-paragraph">
+              From junior developer to senior roles, I've honed my expertise in
+              coding best practices, debugging, and project management. I thrive
+              on challenging projects that demand creative, out-of-the-box
+              thinking. Mentoring junior developers and sharing my knowledge is
+              also a fulfilling aspect of my career.
+            </p>
+            <p class="intro-paragraph">
+              I am dedicated to delivering high-quality solutions tailored to
+              unique client needs. If you're seeking a skilled and experienced
+              software engineer to bring your ideas to fruition, I'd love to
+              connect.
+            </p>
+          </div>
+        </section>
+        <div class="separator"></div>
+        <section class="featured-project">
+          <h2 class="featured-project__heading">
+            Featured Project: HP 3D WebGL Interactive WebApp
+          </h2>
+          <div class="featured-project__container">
+            <div class="featured-project__image">
+              <img
+                src="/assets/images/portfolio/hp-3d.gif"
+                alt="HP 3D WebGL Interactive WebApp Screenshot"
+              />
+            </div>
+            <div class="featured-project__details">
+              <h3 class="featured-project__title">
+                HP 3D WebGL Interactive WebApp
+              </h3>
+              <p class="featured-project__meta">
+                <strong>Frontend Tech:</strong> three.js, React<br />
+                <strong>Role:</strong> Development Lead, Maintainer<br />
+                <strong>Hosting Platform:</strong> AWS S3<br />
+                <strong>Integrations:</strong> Three.js, Jira, React
+              </p>
+              <p>
+                Led the development of an interactive 3D web application for HP,
+                enabling users to visualize and interact with complex product
+                models directly in the browser. The project leveraged three.js
+                and React to deliver smooth, real-time graphics and a seamless
+                user experience. Collaborated with cross-functional teams to
+                integrate feedback workflows and ensure high performance across
+                devices.
+              </p>
+              <a
+                class="PrimaryCTA"
+                href="/portfolio.html"
+                rel="noopener noreferrer"
+                >View More Projects</a
+              >
+            </div>
+          </div>
+        </section>
+        <div class="separator"></div>
+        <div class="cta-linkedin">
+          <div class="cta-linkedin__container">
+            <h2 class="cta-linkedin__heading">Let's Connect!</h2>
+            <p class="cta-linkedin__text">
+              Interested in working together or learning more? Reach out on LinkedIn for opportunities, networking, or a chat!
+            </p>
+            <a
+              class="cta-linkedin__button"
+              href="https://www.linkedin.com/in/cory-kratz-ba96b7b2/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>Connect on LinkedIn</span>
+            </a>
+          </div>
+        </div>
+        <div class="separator"></div>
+      </main>
+      <footer class="footer">
+        <p>&copy; 2025 Cory Kratz. All rights reserved.</p>
+      </footer>
+    </div>
+    <script src="/src/js/main.js"></script>
+  </body>
+</html>
