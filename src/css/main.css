@@ -880,6 +880,63 @@ section.skills {
   display: inline-block;
 }
 
+.resume__progression {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 10px;
+  margin: 14px 0 12px 0;
+  padding: 0;
+  counter-reset: promotion;
+}
+
+.resume__progression-step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px 14px;
+  background: #23283a;
+  border: 1px solid #2e344a;
+  border-left: 3px solid #4a90e2;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(74, 144, 226, 0.08);
+}
+
+.resume__progression-step:not(:last-child)::after {
+  content: "→";
+  position: absolute;
+  right: -13px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #4a90e2;
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+.resume__progression-step--current {
+  background: #1f2740;
+  border-left-color: #ffd43b;
+}
+
+.resume__progression-role {
+  color: #e3eafc;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.2px;
+}
+
+.resume__progression-step--current .resume__progression-role {
+  color: #ffd43b;
+}
+
+.resume__progression-years {
+  color: #bfc8e6;
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+}
+
 .resume__job .resume__client {
   color: #4a90e2;
   background: #181c24;
@@ -943,6 +1000,19 @@ section.skills {
 
 /* Responsive styles */
 @media (max-width: 768px) {
+  .resume__progression {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .resume__progression-step:not(:last-child)::after {
+    content: "↓";
+    right: auto;
+    left: 14px;
+    top: auto;
+    bottom: -11px;
+    transform: none;
+  }
+
   .hero-container {
     grid-template-columns: 1fr;
     padding: 32px 12px;
