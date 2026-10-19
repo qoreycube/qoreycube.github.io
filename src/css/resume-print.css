@@ -1,0 +1,279 @@
+/* Print layout for resume.html. Used by scripts/build-resume-pdf.sh and by
+   the browser's own print dialog. US Letter, light background, compact. */
+
+@page {
+  size: letter;
+  margin: 0.5in 0.55in;
+}
+
+* {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  animation: none !important;
+  transition: none !important;
+}
+
+html,
+body {
+  background: #fff;
+  color: #1a1a1a;
+  font-size: 10pt;
+  line-height: 1.35;
+}
+
+.site-container {
+  max-width: none;
+  padding: 0;
+}
+
+main {
+  box-shadow: none;
+}
+
+.hero,
+.micro-menu,
+.separator,
+.footer,
+.resume__divider,
+.resume__column__image,
+.resume__download {
+  display: none !important;
+}
+
+.resume {
+  background: none;
+  color: inherit;
+  padding: 0;
+  max-width: none;
+  font-size: 10pt;
+}
+
+/* Header */
+.resume__header {
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 4pt;
+  flex-wrap: nowrap;
+  break-inside: avoid;
+}
+
+.resume__column {
+  flex: 1 1 auto;
+}
+
+.resume__right {
+  flex: 0 0 auto;
+}
+
+.resume__title {
+  font-size: 22pt;
+  line-height: 1.1;
+  color: #111;
+}
+
+.resume__subtitle {
+  font-size: 10.5pt;
+  font-weight: 500;
+  color: #2b527e;
+  margin: 3pt 0 0 0;
+}
+
+.resume__contact p {
+  margin: 0 0 2pt 0;
+  font-size: 9.5pt;
+}
+
+.resume__contact a,
+.resume a {
+  color: #2b527e;
+  text-decoration: none;
+}
+
+/* Section headings */
+.resume h3 {
+  font-size: 11.5pt;
+  font-weight: 700;
+  color: #2b527e;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  border-bottom: 1.5px solid #2b527e;
+  padding-bottom: 2pt;
+  margin: 10pt 0 6pt 0;
+  break-after: avoid;
+}
+
+.resume p {
+  margin: 0 0 5pt 0;
+  orphans: 3;
+  widows: 3;
+}
+
+/* Competencies and client tags as outlined chips */
+.resume__competencies {
+  gap: 4px 5px;
+  margin-top: 4pt;
+}
+
+.resume__competency,
+.resume__job .resume__client {
+  color: #1a1a1a;
+  background: #f3f6fa;
+  border: 1px solid #c7d2e3;
+  border-radius: 999px;
+  font-size: 8.5pt;
+  padding: 1px 7px;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.resume__job .resume__client {
+  margin: 0 3px 3px 0;
+}
+
+/* Skills grid */
+.resume__skills-table {
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 8px;
+  row-gap: 8px;
+  margin-top: 4pt;
+  break-inside: avoid;
+}
+
+.skills-column {
+  background: #f7f9fc;
+  border: 1px solid #e1e6ef;
+  border-radius: 4px;
+  padding: 6px 8px;
+  color: #1a1a1a;
+  break-inside: avoid;
+}
+
+.skills-column h4 {
+  font-size: 9pt;
+  color: #2b527e;
+  margin: 0 0 2pt 0;
+}
+
+.skills-column ul {
+  font-size: 8.25pt;
+  line-height: 1.3;
+  padding-left: 11px;
+  margin: 0 0 5pt 0;
+}
+
+/* Experience */
+.resume__job {
+  margin-bottom: 8pt;
+  padding-bottom: 6pt;
+  border-bottom: 1px solid #e1e6ef;
+}
+
+/* Keep the job title, company line, and promotion timeline together */
+.resume__job > p:first-of-type {
+  break-after: avoid;
+}
+
+/* Short jobs (no promotion timeline) stay on one page */
+.resume__job:not(:has(.resume__progression)) {
+  break-inside: avoid;
+}
+
+.resume__job h4 {
+  font-size: 11pt;
+  color: #111;
+  margin: 0 0 1pt 0;
+  break-after: avoid;
+}
+
+.resume__job strong {
+  color: #2b527e;
+  background: none;
+  padding: 0;
+  margin: 0;
+  font-size: 9.5pt;
+  letter-spacing: 0;
+}
+
+.resume__job em {
+  padding: 0;
+  margin: 0;
+  font-size: 9pt;
+  font-weight: 400;
+  color: #444;
+  letter-spacing: 0;
+}
+
+.resume__progression {
+  /* The site's mobile media query stacks this at print width; force a row */
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  margin: 4pt 0 2pt 0;
+  break-inside: avoid;
+  break-after: avoid;
+}
+
+.resume__progression-step {
+  background: #f7f9fc;
+  border: 1px solid #d5dce8;
+  border-left: 3px solid #2b527e;
+  border-radius: 4px;
+  padding: 2px 7px;
+  gap: 0;
+}
+
+.resume__progression-step:not(:last-child)::after {
+  content: "→";
+  position: absolute;
+  right: -12px;
+  left: auto;
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-50%);
+  color: #2b527e;
+  font-size: 8pt;
+}
+
+.resume__progression-step--current {
+  background: #fdf8e7;
+  border-left-color: #b8860b;
+}
+
+.resume__progression-role,
+.resume__progression-step--current .resume__progression-role {
+  color: #111;
+  font-size: 8.25pt;
+  letter-spacing: 0;
+}
+
+.resume__progression-years {
+  color: #555;
+  font-size: 7.75pt;
+}
+
+.resume__job ul {
+  font-size: 9.5pt;
+  line-height: 1.38;
+  padding-left: 14px;
+  margin: 4pt 0 0 0;
+  color: #1a1a1a;
+}
+
+.resume__job ul li {
+  margin-bottom: 2.5pt;
+  break-inside: avoid;
+}
+
+.resume__job ul + p {
+  margin-top: 5pt;
+}
+
+/* Education and certifications */
+.resume__education,
+.resume__certifications {
+  font-size: 9.5pt;
+  padding-left: 14px;
+  margin: 0;
+}

@@ -1144,3 +1144,10 @@ main {
     margin: 40px auto;
   }
 }
+
+/* Resume page: PDF download button under the contact block */
+.resume__download {
+  margin-top: 12px;
+  padding: 8px 18px;
+  font-size: 0.95rem;
+}
